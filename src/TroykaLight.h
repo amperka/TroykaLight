@@ -23,13 +23,6 @@
 #define ADC_BIT             10
 #define ADC_VALUE_MAX       pow(2, ADC_BIT)
 
-#if defined(__AVR__)
-#define OPERATING_VOLTAGE   5.0
-
-#elif defined(__SAM3X8E__) || defined(__SAM3A8C__) || defined(__SAM3A4C__) || defined(__SAMD21G18A__) || defined(ARDUINO_ARCH_ESP8266) || defined(__arm__)
-#define OPERATING_VOLTAGE   3.3
-#endif
-
 class TroykaLight
 {
 public:
