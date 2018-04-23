@@ -3,7 +3,7 @@
 
 // создаём объект для работы с датчиком освещённости
 // и передаём ему номер пина выходного сигнала
-LIGHT sensorLight(A4);
+TroykaLight sensorLight(A0);
 
 void setup()
 {
@@ -13,9 +13,14 @@ void setup()
 
 void loop()
 {
-  // вывод показателей сенсора освещённости в люксах
+  // считывание данных с датчика освещённости
+  sensorLight.read();
+  // вывод показателей сенсора освещённости в люксахи
   Serial.print("Light is ");
-  Serial.print(sensorLight.readLight());
-  Serial.println(" Lx");
-  delay(100);
+  Serial.print(sensorLight.getLightLux());
+  Serial.print(" Lx\t");
+  // вывод показателей сенсора освещённости в фут-свечах
+  Serial.print(sensorLight.getLightFootCandles());
+  Serial.println(" Foot Candles");
+  delay(300);
 }

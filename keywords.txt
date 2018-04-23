@@ -1,0 +1,21 @@
+#######################################
+# Syntax Coloring Map TroykaLight
+#######################################
+
+#######################################
+# Datatypes (KEYWORD1)
+#######################################
+
+TroykaLight	KEYWORD1
+
+#######################################
+# Methods and Functions (KEYWORD2)
+#######################################
+
+read	KEYWORD2
+getLightLux	KEYWORD2
+getLightFootCandles	KEYWORD2
+
+#######################################
+# Constants (LITERAL1)
+#######################################
